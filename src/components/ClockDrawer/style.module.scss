@@ -1,0 +1,90 @@
+@import "../../style/common.scss";
+.clock_drawer {
+  @extend .full_screen;
+  @extend .image_center;
+  background-image: url("/static/img/cover/clock_page.jpg");
+  flex-direction: column;
+  filter: brightness(0.93);
+  color: white;
+  user-select: none;
+}
+.wrap {
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  .time {
+    @extend .flex_center;
+    flex-direction: column;
+    position: relative;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    &::after {
+      content: "闹钟";
+      position: absolute;
+      opacity: 0.6;
+      font-size: 1rem;
+      top: 1rem;
+    }
+    p {
+      font-size: 2.4rem;
+    }
+  }
+}
+.circle {
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 1px solid white;
+  animation: rotateInfinity 6s linear infinite;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    transform: translateX(-50%);
+    left: -1px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+}
+.action {
+  height: 50vh;
+  border-radius: 10px;
+  @extend .flex_center;
+  flex-direction: column;
+  .btn {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border: 1px solid white;
+    font-size: 1rem;
+    width: 5rem;
+    text-align: center;
+    border-radius: 2rem;
+    background-color: #fff;
+    color: #3498db;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:active {
+      transform: scale(0.99);
+    }
+    &_default {
+      @extend .btn;
+      color: #fff;
+      background-color: transparent;
+    }
+  }
+}
+
+@keyframes rotateInfinity {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

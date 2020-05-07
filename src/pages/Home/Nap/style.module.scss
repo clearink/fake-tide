@@ -1,0 +1,61 @@
+@import "../Sleep/style.module.scss";
+@import "../../../style/common.scss";
+.nap {
+  @extend .sleep;
+}
+.clock {
+  .current_time {
+    font-size: 3rem;
+  }
+  .clock_close {
+    p {
+      font-size: 1.2rem;
+    }
+  }
+}
+.select_time {
+  position: relative;
+  .minute {
+    font-size: 1rem;
+    @extend .absolute_center_y;
+  }
+  .time {
+    bottom: -5.5rem;
+  }
+}
+.nap_circle {
+  opacity: 0.5;
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 2px solid white;
+  transition: all 0.3s;
+  animation: scaleInfinity 4s ease-in-out infinite alternate 1s;
+}
+.clock_time {
+  @extend .absolute_center_x;
+  color: #ccc;
+  font-size: 0.8rem;
+  bottom: -5rem;
+  white-space: nowrap;
+}
+
+.action {
+  flex-direction: column;
+}
+
+@keyframes scaleInfinity {
+  0% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1);
+  }
+  95% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1.05);
+  }
+}

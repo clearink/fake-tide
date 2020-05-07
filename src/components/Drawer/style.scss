@@ -1,0 +1,44 @@
+@import "../../style/common.scss";
+.drawer {
+  @extend .full_screen;
+  top: auto;
+  user-select: none;
+}
+.drawer_mask {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+.drawer_content {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  left: 0;
+  right: 0;
+  width: 100%;
+  bottom: 0;
+  background-color: #fff;
+  transform: translate3d(0, 0, 0);
+  .drawer_title {
+    font-size: 1rem;
+  }
+}
+.drawer_body {
+  overflow: scroll;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.drawer-open {
+  height: 100vh;
+  .drawer_mask {
+    height: 100%;
+    opacity: 1;
+    background-color: rgba($color: #000, $alpha: 0.45);
+  }
+}

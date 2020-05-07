@@ -1,0 +1,6 @@
+@import "../../../style/common.scss";
+.sleep {
+  @extend .full_screen;
+  background-color: #5d4d63;
+  z-index: 2;
+}

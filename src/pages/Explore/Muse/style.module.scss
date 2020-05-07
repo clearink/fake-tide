@@ -1,0 +1,119 @@
+@import "../../../style/common.scss";
+$color-white: #fff;
+$color-black: #000;
+$color-dark: #7f8c8d;
+.muse {
+  @extend .full_screen;
+  @extend .image_center;
+  color: $color-white;
+  background-color: $color-white;
+  display: flex;
+  flex-direction: column;
+  &::after {
+    content: "";
+    z-index: -1;
+    @extend .full_screen;
+    background-color: rgba($color-black, $alpha: 0.3);
+    backdrop-filter: blur(20px);
+  }
+}
+.header {
+  height: 8vh;
+  @extend .flex_center;
+  display: flex;
+  color: $color-white;
+  i {
+    @extend .flex_center;
+    width: 4rem;
+    height: 4rem;
+    &::before {
+      font-size: 1.4rem;
+    }
+  }
+  p {
+    flex: 1;
+  }
+}
+.main {
+  flex: 1;
+  @extend .flex_center;
+  flex-direction: column;
+  .muse_name {
+    flex-basis: 60%;
+    font-size: 2.2rem;
+    @extend .flex_center;
+  }
+  .select {
+    font-size: 15px;
+    flex-basis: 10vh;
+    @extend .flex_center;
+  }
+}
+.action {
+  flex-basis: 15vh;
+  @extend .flex_center;
+  i {
+    cursor: pointer;
+    &:active {
+      opacity: 0.4;
+    }
+  }
+  .icon {
+    @extend .flex_center;
+    box-sizing: border-box;
+    width: 3.4rem;
+    height: 3.4rem;
+    background-color: $color-white;
+    border-radius: 50%;
+    &::before {
+      color: $color-dark;
+      position: relative;
+      font-size: 1rem;
+    }
+  }
+  .pause {
+    background: transparent;
+    border: 3px solid rgba($color: #fff, $alpha: 0.4);
+    &::before {
+      color: rgba($color: #fff, $alpha: 0.4);
+    }
+  }
+  .play::before {
+    left: 2px;
+  }
+  .group {
+    display: flex;
+    i {
+      margin: 0 2rem;
+    }
+  }
+}
+.footer {
+  flex-basis: 20vh;
+  @extend .flex_center;
+  .sound_change {
+    cursor: pointer;
+    flex-basis: 50%;
+    @extend .flex_center;
+    flex-direction: column;
+    i {
+      font-size: 1.4rem;
+      margin-bottom: 0.5rem;
+    }
+  }
+}
+.thumbnail {
+  @extend .flex_center;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 1px rgba($color: #7f8c8d, $alpha: 1);
+  background-color: $color-white;
+  position: fixed;
+  right: 1rem;
+  bottom: 30vh;
+  i{
+    color: #2c3e50;
+    font-size: 1.3rem;
+  }
+}

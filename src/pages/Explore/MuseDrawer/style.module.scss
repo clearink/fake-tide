@@ -1,0 +1,114 @@
+@import "../../../style/common.scss";
+
+$color-light: #ff5a4d;
+.drawer {
+  @extend .full_screen;
+  overflow: auto;
+}
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 2;
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  i {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    &::before {
+      font-size: 1.6rem;
+    }
+  }
+  h2 {
+    flex: 1;
+    font-weight: 100;
+  }
+}
+.page_info {
+  padding: 1rem 2rem;
+  h2 {
+    font-size: 1.8rem;
+    font-weight: 100;
+    margin-bottom: 0.6rem;
+  }
+  span {
+    font-weight: 100;
+  }
+}
+.group {
+  margin: 1rem 0;
+}
+.group_title {
+  padding: 10px 2rem;
+  .wrap {
+    display: flex;
+    align-items: center;
+    .title {
+      flex: 1;
+      font-size: 20px;
+    }
+    .more {
+      color: $color-light;
+      font-size: 15px;
+    }
+  }
+  .sub_title {
+    margin-top: 4px;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+.albums {
+  display: flex;
+  justify-content: center;
+  padding: 0 1.4rem;
+  flex-wrap: wrap;
+  .album {
+    display: flex;
+    color: #000;
+    flex-direction: column;
+    width: 140px;
+    margin: 16px 8px;
+    position: relative;
+    .cover {
+      height: 90px;
+      width: 100%;
+      object-fit: cover;
+      border-radius: 7px;
+    }
+    .name {
+      margin-top: 12px;
+      font-size: 15px;
+      font-weight: 200;
+    }
+    .duration {
+      margin-top: 4px;
+      color: rgba(0, 0, 0, 0.16);
+    }
+  }
+}
+.base {
+  .album {
+    height: 150px;
+    .cover {
+      height: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+    .name {
+      color: #fff;
+      left: 20px;
+      position: absolute;
+    }
+    .duration {
+      color: rgba($color: #fff, $alpha: 0.6);
+      bottom: 20px;
+      left: 20px;
+      position: absolute;
+    }
+  }
+}

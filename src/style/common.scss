@@ -1,0 +1,33 @@
+.full_screen {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+.flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.absolute_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.absolute_center_y {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.absolute_center_x {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.image_center {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

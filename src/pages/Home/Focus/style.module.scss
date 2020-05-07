@@ -1,0 +1,138 @@
+@import "../../../style/common.scss";
+.focus {
+  color: white;
+  @extend .full_screen;
+  display: flex;
+  flex-direction: column;
+  @extend .image_center;
+  &::after {
+    content: "";
+    @extend .full_screen;
+    z-index: -1;
+    background: rgba($color: #000000, $alpha: 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.5s;
+  }
+
+  .header {
+    margin: 0 0.4rem;
+    flex-basis: 8vh;
+    @extend .flex_center;
+    i {
+      padding: 1rem;
+      &::before {
+        font-size: 1.2rem;
+        color: white;
+      }
+    }
+
+    span {
+      font-size: 1.2rem;
+      flex: 1;
+      text-align: center;
+    }
+  }
+}
+.relax::after {
+  background: rgba($color: #52a065, $alpha: 0.8);
+}
+.clock {
+  flex: 1;
+  @extend .flex_center;
+  .select_time {
+    position: relative;
+    font-size: 2rem;
+  }
+  .count_down {
+    font-size: 2rem;
+  }
+  .minute {
+    position: absolute;
+    font-size: 1rem;
+    right: 0;
+    @extend .absolute_center_y;
+  }
+}
+.action {
+  flex-basis: 15vh;
+  @extend .flex_center;
+  .btn {
+    margin: 0 10px;
+    padding: 1rem;
+    text-align: center;
+    border-radius: 2rem;
+    cursor: pointer;
+    width: 5rem;
+    font-size: 0.97rem;
+    background-color: #fff;
+    color: #000;
+    user-select: none;
+    border: 1px solid white !important;
+    z-index: 1;
+  }
+  .btn_transparent {
+    @extend .btn;
+    color: white;
+    background-color: transparent;
+  }
+}
+.focus_mode_title {
+  @extend .flex_center;
+  font-size: 1.2rem;
+  color: rgba($color: #000000, $alpha: 0.6);
+  height: 8vh;
+}
+.tool_bar {
+  flex-basis: 20vh;
+  @extend .flex_center;
+  z-index: 1;
+  .wrap {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+  .mode {
+    cursor: pointer;
+    flex-basis: 33.3%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    i {
+      font-size: 1.5rem;
+      margin-bottom: 0.2rem;
+    }
+  }
+}
+
+.sidebar_item {
+  @extend .flex_center;
+  padding: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  &:active {
+    background-color: #ccc;
+  }
+  i {
+    flex-basis: 3rem;
+    &::before {
+      font-size: 2rem;
+      margin-right: 1rem;
+    }
+  }
+  .icon_choice {
+    position: absolute;
+    right: 0;
+  }
+  .mode_intro {
+    flex: 1;
+    p {
+      font-size: 1.04rem;
+      margin-bottom: 0.4rem;
+    }
+    span {
+      font-size: 0.8rem;
+      color: rgba($color: #000000, $alpha: 0.6);
+    }
+  }
+}

@@ -1,0 +1,5 @@
+@import "../../../style/common.scss";
+.drawer_container {
+  @extend .full_screen;
+  background-color: #fff;
+}

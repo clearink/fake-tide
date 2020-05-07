@@ -1,0 +1,50 @@
+@import "../Focus/style.module.scss";
+@import "../../../style/common.scss";
+.breathe {
+  @extend .focus;
+}
+.clock {
+  .ball {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    background-color: rgba(30, 144, 255, 1);
+    animation: ani 7s linear infinite;
+    animation-fill-mode: backwards;
+  }
+  .select_time {
+    position: relative;
+  }
+  .minute {
+    @extend .absolute_center_y;
+    font-size: 1.2rem;
+    right: 0;
+  }
+}
+.breathe_text {
+  z-index: 1;
+  .breathe_ball {
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    border: 1px solid white;
+    animation: ani 5s linear infinite;
+    animation-fill-mode: backwards;
+  }
+}
+
+@keyframes ani {
+  0% {
+    border-radius: 61% 39% 56% 44% / 53% 58% 42% 47%;
+  }
+  33% {
+    border-radius: 43% 57% 43% 57% / 44% 50% 50% 56%;
+  }
+  66% {
+    border-radius: 56% 44% 63% 37% / 44% 50% 50% 56%;
+  }
+  100% {
+    border-radius: 61% 39% 56% 44% / 53% 58% 42% 47%;
+  }
+}

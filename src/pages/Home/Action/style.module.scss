@@ -1,0 +1,66 @@
+@import "../../../style/common.scss";
+.action {
+  color: white;
+  @extend .full_screen;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+
+  .greet {
+    margin: 2rem 2rem 0;
+    word-break: break-all;
+    user-select: none;
+    .hello {
+      margin-bottom: 0.5rem;
+      font-size: 2rem;
+      font-weight: 200;
+    }
+    .text{
+      font-size: 15px;
+      font-weight: 100;
+    }
+  }
+
+  .play {
+    flex: 1;
+    @extend .flex_center;
+
+    i {
+      transition: all 0.8s;
+      opacity: 1;
+      &::before {
+        font-size: 2rem;
+      }
+    }
+    .play_music {
+      opacity: 0;
+      transform: scale(1.3);
+    }
+  }
+
+  .mode_list {
+    flex-basis: 15vh;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    user-select: none;
+    i.active {
+      border: 1px solid;
+    }
+    i {
+      @extend .flex_center;
+      margin-bottom: 0.5rem;
+      height: 3.2rem;
+      width: 3.2rem;
+      border-radius: 50%;
+      background-color: rgba($color: white, $alpha: 0.4);
+      &::before {
+        font-size: 1.4rem;
+        cursor: pointer;
+      }
+    }
+    p {
+      text-align: center;
+    }
+  }
+}

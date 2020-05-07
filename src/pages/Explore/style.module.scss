@@ -1,0 +1,266 @@
+@import "../../style/common.scss";
+$color-red: #ff5a4d;
+.padding {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.explore {
+  background-color: #fff;
+  @extend .full_screen;
+  header {
+    z-index: 2;
+    @extend .flex_center;
+    @extend .padding;
+    justify-content: start;
+    height: 8vh;
+    background-color: #fff;
+    font-size: 1.2rem;
+  }
+  footer {
+    margin: 2rem 0;
+    text-align: center;
+    color: rgba($color: #000000, $alpha: 0.4);
+    letter-spacing: 0.2rem;
+    font-size: 0.8rem;
+  }
+}
+.content_wrap {
+  height: 82vh;
+  overflow: auto;
+}
+.page_info {
+  @extend .padding;
+  margin-bottom: 1rem;
+  height: 10vh;
+  p {
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 0.6rem;
+  }
+  span {
+    font-weight: 100;
+  }
+}
+:global(.swiper-slide) {
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+:global(.swiper-container) {
+  height: 50vw;
+  max-height: 500px;
+}
+.banner_item {
+  user-select: none;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  height: 50vw;
+  max-height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+.banner_text {
+  position: absolute;
+  bottom: 1.4rem;
+  left: 3rem;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+.nav_box {
+  height: 15vh;
+  display: flex;
+  align-items: center;
+
+  &_item {
+    will-change: transform;
+    width: 25%;
+    @extend .flex_center;
+    flex-direction: column;
+    color: #ccc;
+    cursor: pointer;
+    transition: transform 0.3s;
+    &:active {
+      transform: scale(0.96);
+    }
+  }
+  i {
+    text-align: center;
+    margin-bottom: 0.4rem;
+    &::before {
+      display: inline-block;
+      font-size: 2rem;
+      padding: 0.6rem 0.681rem;
+    }
+  }
+  p {
+    text-align: center;
+  }
+}
+.name {
+  @extend .padding;
+  @extend .flex_center;
+  height: 10vh;
+  h3 {
+    flex: 1;
+  }
+  span {
+    color: #e74c3c;
+  }
+}
+
+.sound_list {
+  overflow: auto;
+  display: flex;
+}
+
+.sound_list_item {
+  flex-shrink: 0;
+  @extend .flex_center;
+  flex-direction: column;
+  height: 150px;
+  background-color: #f1f2f6;
+  width: 115px;
+  margin: 0 0.5rem;
+  border-radius: 12px;
+  overflow: hidden;
+  &:first-child {
+    margin-left: 2rem;
+  }
+  img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    font-weight: 100;
+    color: #fff;
+  }
+}
+
+.sleep_box {
+  @extend .image_center;
+  padding-bottom: 2rem;
+  background: linear-gradient(to bottom, #833471, #2980b9);
+  .name {
+    color: white;
+    height: 8vh;
+  }
+}
+.sleep_list {
+  color: #fff;
+  margin-top: 2rem;
+  @extend .padding;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  &_item {
+    flex-basis: 48%;
+    position: relative;
+    img {
+      object-fit: cover;
+      border-radius: 8px;
+      width: 100%;
+      height: 110px;
+      background-color: #fff;
+    }
+    .infos {
+      margin-bottom: 1rem;
+      p {
+        margin: 0.5rem 0;
+        font-size: 1rem;
+      }
+      span {
+        color: #ccc;
+        font-size: 12px;
+      }
+    }
+  }
+}
+.muse_list {
+  @extend .sleep_list;
+  margin-top: 1rem;
+  color: #000;
+  &_item {
+    @extend.sleep_list_item;
+  }
+}
+.day_image_wrap {
+  margin: 0 2rem;
+  padding: 1rem;
+  background-color: #ecf0f1;
+  .img_container {
+    position: relative;
+    height: 300px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .day_title {
+      position: absolute;
+      width: 100%;
+      bottom: 1rem;
+      list-style: none;
+      display: flex;
+      color: rgba($color: #fff, $alpha: 0.4);
+      justify-content: space-around;
+    }
+  }
+  .poetry {
+    margin: 1rem 0;
+    line-height: 1.8rem;
+    font-size: 1rem;
+  }
+  .author {
+    font-size: 0.8rem;
+    color: rgba($color: #000000, $alpha: 0.5);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .day_time {
+    position: absolute;
+    color: rgba($color: #fff, $alpha: 0.4);
+    top: 1rem;
+    right: 1rem;
+    text-align: center;
+    .day {
+      font-size: 1.6rem;
+      font-weight: 100;
+    }
+    .month {
+      margin-top: 0.2rem;
+      font-size: 0.6rem;
+    }
+  }
+}
+.article_list {
+  @extend .padding;
+  padding-top: 2rem;
+  .article {
+    display: flex;
+    padding: 2rem 0;
+    .title {
+      flex: 1;
+      p {
+        margin-top: 1rem;
+      }
+    }
+    .title_type {
+      color: $color-red;
+      padding: 0.2rem 0.4rem;
+      background-color: rgba($color: #000000, $alpha: 0.1);
+      font-size: 12px;
+      border-radius: 4px;
+    }
+    img {
+      height: 80px;
+      width: 80px;
+      object-fit: cover;
+      border-radius: 15px;
+    }
+  }
+}

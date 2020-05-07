@@ -1,0 +1,23 @@
+.menu {
+  height: 10vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid rgba($color: #ffffff, $alpha: 0.3);
+  box-sizing: border-box;
+  a {
+    width: 33.3%;
+    height: 100%;
+    color: #ccc;
+    opacity: 0.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    i::before {
+      font-size: 1.6rem;
+    }
+  }
+}
+.active > i::before {
+  color: white !important;
+}
