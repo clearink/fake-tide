@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import { animateProps, pageTransition } from "../../constant/variants";
 
 import Menu from "../../components/Menu";
-import { Link } from "react-router-dom";
 
 function User(props) {
   return (

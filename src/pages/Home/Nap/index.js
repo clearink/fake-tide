@@ -1,12 +1,12 @@
-import React, { useEffect, useState, useCallback, useMemo } from "react";
+import React, { useState, useCallback, useMemo } from "react";
 import style from "./style.module.scss";
-import { motion, AnimatePresence, useAnimation } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { PickerView } from "antd-mobile";
 import { useSelector, useDispatch } from "react-redux";
-import { FINISH, PLAY, startTimer, finishTimer } from "../../../sotre/timer";
-import { setNapTime, setNapClock, setNapClockDelay } from "../../../sotre/nap";
-import { NAP } from "../../../sotre/mode";
+import { FINISH, PLAY, startTimer, finishTimer } from "../../../store/timer";
+import { setNapTime, setNapClock, setNapClockDelay } from "../../../store/nap";
+import { NAP } from "../../../store/mode";
 import { vibrate, calcCurrentTime } from "utils";
 import {
   pageTransition,

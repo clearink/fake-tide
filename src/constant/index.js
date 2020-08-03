@@ -1,5 +1,5 @@
-import { FOCUS, SLEEP, BREATHE, NAP } from "../sotre/mode";
-import { TIMER_MODE, EFFICIENT_MODE, INFINITE_MODE } from "../sotre/focus";
+import { FOCUS, SLEEP, BREATHE, NAP } from "../store/mode";
+import { TIMER_MODE, EFFICIENT_MODE, INFINITE_MODE } from "../store/focus";
 
 export const showFinishPageMinTime = 300;
 export const modeToText = {

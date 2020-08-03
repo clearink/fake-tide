@@ -1,4 +1,4 @@
-import { FINISH, PLAY } from "./timer";
+import { FINISH } from "./timer";
 
 //type
 export const SET_MUSE_VISIBLE = "SET_MUSE_VISIBLE";

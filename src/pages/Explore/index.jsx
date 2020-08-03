@@ -18,7 +18,7 @@ import { EXPLORE_PATH, imageFormat } from "../../constant";
 import { useThrottle } from "../../utils/userHooks";
 import { useSelector, useDispatch } from "react-redux";
 import MuseTypeList from "./MuseTypeList";
-import { setMuseList } from "../../sotre/muse";
+import { setMuseList } from "../../store/muse";
 import museData from "utils/museList.json";
 
 function Explore(props) {

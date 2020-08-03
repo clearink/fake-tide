@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import style from "./style.module.scss";
-import { AnimatePresence, motion } from "framer-motion";
 
 function PlusDrawer(props) {
   const { close } = props;

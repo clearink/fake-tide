@@ -18,7 +18,7 @@ import {
   setFocusCount,
   EFFICIENT_MODE,
   INFINITE_MODE,
-} from "../../../sotre/focus";
+} from "../../../store/focus";
 import {
   PLAY,
   FINISH,
@@ -26,8 +26,8 @@ import {
   startTimer,
   pauseTimer,
   finishTimer,
-} from "../../../sotre/timer";
-import { FOCUS } from "../../../sotre/mode";
+} from "../../../store/timer";
+import { FOCUS } from "../../../store/mode";
 import { formateTime } from "../../../utils";
 import {
   focusModeList,

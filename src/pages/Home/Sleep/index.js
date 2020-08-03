@@ -9,13 +9,13 @@ import { Link } from "react-router-dom";
 import Progress from "components/Progress";
 import Drawer from "components/Drawer";
 import { vibrate, calcCurrentTime } from "utils";
-import { SLEEP } from "../../../sotre/mode";
-import { FINISH, startTimer, finishTimer } from "../../../sotre/timer";
+import { SLEEP } from "../../../store/mode";
+import { FINISH, startTimer, finishTimer } from "../../../store/timer";
 import {
   setSleepTime,
   setSleepClock,
   setSleepClockDelay,
-} from "../../../sotre/sleep";
+} from "../../../store/sleep";
 import {
   pageTransition,
   fade,

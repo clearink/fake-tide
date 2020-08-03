@@ -3,7 +3,7 @@ import ReactDom from "react-dom";
 import style from "./style.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
-import { setMuseVisible, setMuseState } from "../../../sotre/muse";
+import { setMuseVisible, setMuseState } from "../../../store/muse";
 import {
   pageTransition,
   animateProps,
@@ -11,7 +11,7 @@ import {
   fade,
 } from "../../../constant/variants";
 import { imageFormat } from "../../../constant";
-import { FINISH, PAUSE, PLAY } from "../../../sotre/timer";
+import { FINISH, PAUSE, PLAY } from "../../../store/timer";
 import SoundDrawer from "../../Home/SoundDrawer";
 function Muse(props) {
   const { soundList, active: soundActive } = useSelector(({ music }) => music);

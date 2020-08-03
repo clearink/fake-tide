@@ -8,7 +8,6 @@ import { Route } from "react-router-dom";
 import Explore from "../pages/Explore";
 import User from "../pages/User";
 import { TransitionRedirect } from "../components/TransitionSwitch";
-import Muse from "../pages/Explore/Muse";
 import ExploreSleep from "../pages/Explore/Sleep";
 import SoundDetail from "../pages/Explore/SoundDetail";
 

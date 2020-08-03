@@ -1,10 +1,10 @@
 import React, { memo } from "react";
 import style from "./style.module.scss";
 import { useDispatch, useSelector } from "react-redux";
-import { setMuseVisible, setMuseActive } from "../../../sotre/muse";
+import { setMuseVisible, setMuseActive } from "../../../store/muse";
 import { imageFormat } from "../../../constant";
 import { Modal } from "antd-mobile";
-import { PLAY } from "../../../sotre/timer";
+import { PLAY } from "../../../store/timer";
 
 function MuseTypeList(props) {
   const { museList, state } = useSelector(({ muse }) => muse);

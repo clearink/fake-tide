@@ -1,6 +1,5 @@
 import React, { memo } from "react";
 import style from "./style.module.scss";
-import { motion } from "framer-motion";
 
 function SleepDrawer(props) {
   const { close } = props;

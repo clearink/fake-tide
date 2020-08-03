@@ -1,10 +1,10 @@
-import React, { useMemo, useEffect, useCallback } from "react";
+import React, { useEffect, useCallback } from "react";
 import style from "./style.module.scss";
 import { useDrag } from "react-use-gesture";
-import { useSprings, animated, to, config } from "react-spring";
+import { useSprings, animated, to } from "react-spring";
 import { range } from "utils";
 import { useSelector, useDispatch } from "react-redux";
-import { changeMusic } from "../../../sotre/music";
+import { changeMusic } from "../../../store/music";
 import { imageFormat } from "../../../constant";
 //切换背景特效
 const ImageTransition = (props) => {

@@ -13,13 +13,13 @@ import {
   fade,
   clockTransition,
 } from "../../../constant/variants";
-import { startMusic, pauseMusic } from "../../../sotre/music";
+import { startMusic, pauseMusic } from "../../../store/music";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { PickerView } from "antd-mobile";
 import SoundDrawer from "../SoundDrawer";
 import FinishDrawer from "../../../components/FinishDrawer";
-import { BREATHE } from "../../../sotre/mode";
+import { BREATHE } from "../../../store/mode";
 import { imageFormat } from "../../../constant";
 export default function Breathe() {
   const { active, soundList } = useSelector(({ music }) => music);

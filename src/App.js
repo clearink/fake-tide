@@ -4,13 +4,13 @@ import { HashRouter as Router } from "react-router-dom";
 import { renderRoutes, routes } from "./routes";
 import { useDispatch, useSelector } from "react-redux";
 import { useMobileHackPlay } from "./utils/userHooks";
-import { PLAY, tick, finishTimer } from "./sotre/timer";
-import { FOCUS, SLEEP, NAP } from "./sotre/mode";
+import { PLAY, tick, finishTimer } from "./store/timer";
+import { FOCUS, SLEEP, NAP } from "./store/mode";
 import { Toast } from "antd-mobile";
-import { setFocusCount } from "./sotre/focus";
+import { setFocusCount } from "./store/focus";
 import ClockDrawer from "./components/ClockDrawer";
 import TransitionSwitch from "./components/TransitionSwitch";
-import { pauseMusic, setSoundList } from "./sotre/music";
+import { pauseMusic, setSoundList } from "./store/music";
 import data from "./utils/data.json";
 import Muse from "./pages/Explore/Muse";
 const App = () => {

@@ -3,10 +3,10 @@ import style from "./style.module.scss";
 import { motion } from "framer-motion";
 import { useHistory } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { playPauseMusic } from "../../../sotre/music";
+import { playPauseMusic } from "../../../store/music";
 import { Toast } from "antd-mobile";
 import { homeRouteList, modeToText } from "../../../constant";
-import { FINISH } from "../../../sotre/timer";
+import { FINISH } from "../../../store/timer";
 import Menu from "../../../components/Menu";
 function Action(props) {
   const { canPlay } = useSelector(({ music }) => music);

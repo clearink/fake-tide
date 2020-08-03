@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import style from "./style.module.scss";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSelector, useDispatch } from "react-redux";
-import { NAP, SLEEP } from "../../sotre/mode";
-import { startTimer } from "../../sotre/timer";
+import { NAP, SLEEP } from "../../store/mode";
+import { startTimer } from "../../store/timer";
 function ClockDrawer(props) {
   const { visible, close } = props;
   const { appMode } = useSelector(({ mode }) => mode);

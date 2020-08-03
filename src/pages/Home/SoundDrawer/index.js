@@ -1,4 +1,4 @@
-import React, { useCallback, memo, useMemo } from "react";
+import React, { useCallback, memo } from "react";
 import ReactDOM from "react-dom";
 import style from "./style.module.scss";
 import {
@@ -6,14 +6,13 @@ import {
   AnimateSharedLayout,
   AnimatePresence,
 } from "framer-motion/dist/framer-motion";
-import Drawer from "components/Drawer";
 import { useSelector, useDispatch } from "react-redux";
 import {
   changeMusic,
   startMusic,
   changeVolume,
   playPauseMusic,
-} from "../../../sotre/music";
+} from "../../../store/music";
 import { Slider } from "antd-mobile";
 import { imageFormat } from "../../../constant";
 function SoundDrawer(props) {
