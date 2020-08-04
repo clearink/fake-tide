@@ -43,7 +43,7 @@ export default function Breathe() {
       value: i + 1,
     }));
   }, []);
-  const startBreate = () => {
+  const startBreathe = () => {
     setCount(breatheCount);
     dispatch(startMusic());
     setPlay(true);
@@ -134,7 +134,7 @@ export default function Breathe() {
           className={play ? style.btn_transparent : style.btn}
           onClick={() => {
             if (play) endBreathe();
-            else startBreate();
+            else startBreathe();
           }}
         >
           {play ? "结束" : " 开始呼吸"}

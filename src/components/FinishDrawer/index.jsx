@@ -6,7 +6,8 @@ import { useSelector } from "react-redux";
 import { modeToText, modeToIcon, modeToColor } from "../../constant";
 function FinishDrawer(props) {
   const { visible, close, type, duration, typeName, ...restProps } = props;
-  const { music } = useSelector(({ music }) => music);
+  const { active, soundList } = useSelector(({ music }) => music);
+  const sound = soundList[active] || {};
   const [shareOpen, setShareOpen] = useState(false);
   const handleShareOpen = () => {
     setShareOpen(true);
@@ -49,7 +50,7 @@ function FinishDrawer(props) {
           }}
           transition={{ ease: "easeInOut" }}
           className={style.finish_drawer}
-          style={{ backgroundImage: `url(${music.cover})` }}
+          style={{ backgroundImage: `url(${sound.cover})` }}
           {...restProps}
         >
           <div className={style.header}>
